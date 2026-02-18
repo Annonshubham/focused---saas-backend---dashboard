@@ -1,0 +1,21 @@
+
+import mongoose from 'mongoose';
+import process from 'process';
+
+/**
+ * Robust database connection helper.
+ * Uses process.env.MONGO_URI for connectivity.
+ */
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.MONGO_URI as string);
+
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error: any) {
+    console.error(`Error connecting to MongoDB: ${error.message}`);
+    // Exit process with failure
+    process.exit(1);
+  }
+};
+
+export default connectDB;
