@@ -1,20 +1,58 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🚀 FocusEd SaaS Backend
 
-# Run and deploy your AI Studio app
+A full-stack SaaS backend built using Node.js, Express, TypeScript, and MongoDB.
 
-This contains everything you need to run your app locally.
+## 🛠 Tech Stack
 
-View your app in AI Studio: https://ai.studio/apps/temp/1
+- Node.js
+- Express.js
+- TypeScript
+- MongoDB (Mongoose)
+- JWT Authentication
 
-## Run Locally
+## ✨ Features
 
-**Prerequisites:**  Node.js
+- User Registration & Login
+- JWT-based Authentication
+- Protected Routes
+- CRUD APIs for Goals
+- Middleware-based Error Handling
+- Modular Folder Structure
 
+## 📁 Project Structure
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+server/
+ ├── config/
+ ├── controllers/
+ ├── middleware/
+ ├── models/
+ ├── routes/
+ ├── utils/
+ └── server.ts
+
+## ⚙️ Setup Instructions
+
+1. Clone the repository
+
+   git clone https://github.com/yourusername/yourrepo.git
+
+2. Install dependencies
+
+   npm install
+
+3. Create a `.env` file inside the `server` folder and add:
+
+   PORT=5000
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_secret_key
+
+4. Run the development server
+
+   npm run dev
+
+## 📌 Future Improvements
+
+- Role-based authentication
+- API rate limiting
+- Deployment on Render/Railway
+- Swagger documentation
